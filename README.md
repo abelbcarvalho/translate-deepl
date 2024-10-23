@@ -6,7 +6,8 @@ Implement the [deepl](https://deepl.com) API to make text translation. I'm makin
 2. [Dependencies](#dependencies)
 3. [Structure](#structure)
 4. [Models](#models)
-5. [Response](#response)
+5. [Languages Codes]()
+6. [Response](#response)
 
 ## Description
 This software was built to access the [DeepL API](https://developers.deepl.com/docs/) and make languages translates.
@@ -87,6 +88,11 @@ Here is the build of our models. Note: *attributes with '?' are optionals.*
   "source_lang?": "string or null",
 }
 ```
+
+## Languages Codes
+Here I present to you a link to another documentation file where you'll can see the languages valid. It's what you find at enumerate for backend level.
+
+* Doc: [LANGUAGES.md](./LANGUAGES.md);
 
 ## Response
 
