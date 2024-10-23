@@ -6,11 +6,12 @@ Implement the [deepl](https://deepl.com) API to make text translation. I'm makin
 2. [Dependencies](#dependencies)
 3. [Structure](#structure)
 4. [Models](#models)
-5. [Languages Codes]()
-6. [Response](#response)
+5. [Languages Codes](#languages-codes)
+6. [Translate Model](#translate-model)
+7. [Response](#response)
 
 ## Description
-This software was built to access the [DeepL API](https://developers.deepl.com/docs/) and make languages translates.
+This software is being built to access the [DeepL API](https://developers.deepl.com/docs/) and make languages translates.
 
 It's my intention to build some useful applications to grown up my skills about programming.
 
@@ -95,6 +96,27 @@ Here I present to you a link to another documentation file where you'll can see 
 
 If you want to see the documentation on [deepl.com](https://deepl.com) website, you can access:
 * [DeepL doc target language](https://developers.deepl.com/docs/resources/supported-languages#target-languages);
+
+## Translate Model
+This model get data from another base model and it's used to send data to *DeepL API*.
+
+| Field                  | Type                     | Description                                   |
+|------------------------|--------------------------|-----------------------------------------------|
+| text                   | `str`                    | Text to be translated                         |
+| target_lang            | `EnumLang`              | Target language                               |
+| source_lang            | `Optional[EnumLang]`    | Source language (optional)                    |
+| context                | `Optional[str]`         | Additional context (optional)                 |
+| split_sentences        | `Optional[str]`         | Indicates if sentences should be split (optional)|
+| preserve_formatting     | `Optional[bool]`        | Indicates if formatting should be preserved (optional)|
+| formality              | `Optional[str]`         | Desired level of formality (optional)        |
+| glossary_id            | `Optional[str]`         | Glossary ID (optional)                        |
+| show_billed_characters | `Optional[bool]`        | Indicates if billed characters should be shown (optional)|
+| tag_handling           | `Optional[str]`         | How to handle tags (optional)                |
+| outline_detection      | `Optional[bool]`        | Indicates if outline structures should be detected (optional)|
+| non_splitting_tags     | `Optional[List[str]]`    | Tags that should not be split (optional)     |
+| splitting_tags         | `Optional[List[str]]`    | Tags that should be split (optional)         |
+| ignore_tags            | `Optional[List[str]]`    | Tags to be ignored (optional)                |
+
 
 ## Response
 
