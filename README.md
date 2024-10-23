@@ -91,8 +91,10 @@ Here is the build of our models. Note: *attributes with '?' are optionals.*
 
 ## Languages Codes
 Here I present to you a link to another documentation file where you'll can see the languages valid. It's what you find at enumerate for backend level.
-
 * Doc: [LANGUAGES.md](./LANGUAGES.md);
+
+If you want to see the documentation on [deepl.com](https://deepl.com) website, you can access:
+* [DeepL doc target language](https://developers.deepl.com/docs/resources/supported-languages#target-languages);
 
 ## Response
 
