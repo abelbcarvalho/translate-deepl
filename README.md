@@ -47,6 +47,7 @@ src/
 ├──enums/
 ├──models/
 ├──routes/
+├──use_cases/
 ├──utilities/
 tests/
 .env.example
