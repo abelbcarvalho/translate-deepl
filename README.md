@@ -16,7 +16,7 @@ It's my intention to build some useful applications to grown up my skills about 
 We provide the service for:
 * only one word (single);
 * phrases (one word or more);
-* texts (something large until 2000 characters).
+* texts (something large until 5000 characters).
 
 ## Dependencies
 Here is the list of installed dependencies. First, this project is built using [Python3](https://docs.python.org/3) as programming languages and some libraries listed below.
