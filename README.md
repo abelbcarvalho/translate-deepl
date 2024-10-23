@@ -8,7 +8,8 @@ Implement the [deepl](https://deepl.com) API to make text translation. I'm makin
 4. [Models](#models)
 5. [Languages Codes](#languages-codes)
 6. [Translate Model](#translate-model)
-7. [Response](#response)
+7. [Routes](#routes)
+8. [Response](#response)
 
 ## Description
 This software is being built to access the [DeepL API](https://developers.deepl.com/docs/) and make languages translates.
@@ -118,7 +119,7 @@ This model get data from another base model and it's used to send data to *DeepL
 | splitting_tags         | `Optional[List[str]]`    | Tags that should be split (optional)         |
 | ignore_tags            | `Optional[List[str]]`    | Tags to be ignored (optional)                |
 
-
+## Routes
 ## Response
 
 ---
