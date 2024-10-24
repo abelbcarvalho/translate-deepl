@@ -43,11 +43,13 @@ The package structure of the project [root](/).
 
 ```text
 src/
-├──controller/
+├──controllers/
 ├──core/
 ├──enums/
+├──exceptions/
 ├──models/
 ├──routes/
+├──services/
 ├──use_cases/
 ├──utilities/
 tests/

@@ -2,13 +2,14 @@ from typing import Optional, List
 
 from pydantic import BaseModel
 
-from src.enums.enum_lang import EnumLang
+from src.enums.enum_target_lang import EnumTargetLang
+from src.enums.enum_source_lang import EnumSourceLang
 
 
 class Translate(BaseModel):
     text: str
-    target_lang: EnumLang
-    source_lang: Optional[EnumLang] = None
+    target_lang: EnumTargetLang
+    source_lang: Optional[EnumSourceLang] = None
     context: Optional[str] = None
     split_sentences: Optional[str] = None
     preserve_formatting: Optional[bool] = None

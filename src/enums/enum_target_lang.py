@@ -1,14 +1,13 @@
 from enum import Enum
 
 
-class EnumLang(Enum):
+class EnumTargetLang(Enum):
     AR = "AR"
     BG = "BG"
     CS = "CS"
     DA = "DA"
     DE = "DE"
     EL = "EL"
-    EN = "EN"
     EN_GB = "EN-GB"
     EN_US = "EN-US"
     ES = "ES"
@@ -25,7 +24,6 @@ class EnumLang(Enum):
     NB = "NB"
     NL = "NL"
     PL = "PL"
-    PT = "PT"
     PT_BR = "PT-BR"
     PT_PT = "PT-PT"
     RO = "RO"
@@ -35,6 +33,5 @@ class EnumLang(Enum):
     SV = "SV"
     TR = "TR"
     UK = "UK"
-    ZH = "ZH"
     ZH_HANS = "ZH-HANS"
     ZH_HANT = "ZH-HANT"
