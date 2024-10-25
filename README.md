@@ -25,6 +25,7 @@ We provide the service for:
 Here is the list of installed dependencies. First, this project is built using [Python3](https://docs.python.org/3) as programming languages and some libraries listed below.
 
 * [Flask](https://flask.palletsprojects.com/en/3.0.x/);
+* [Flask Async](https://flask.palletsprojects.com/en/stable/async-await/);
 * [Pydantic](https://docs.pydantic.dev/latest/);
 * [PyTestAsyncio](https://docs.pytest.org/en/stable/);
 * [DeepL Lib](https://github.com/DeepLcom/deepl-python);
@@ -52,6 +53,10 @@ src/
 ├──services/
 ├──use_cases/
 ├──utilities/
+├──├──adapters/
+├──├──checkers/
+├──├──language/
+├──├──response/
 tests/
 .env.example
 .gitignore
