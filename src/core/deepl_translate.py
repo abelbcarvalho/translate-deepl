@@ -2,8 +2,12 @@ from os import environ
 from typing import List
 
 from deepl import Translator, TextResult
+from dotenv import load_dotenv
 
 from src.models.translate import Translate
+
+
+load_dotenv()
 
 
 class DeepLTranslate:
