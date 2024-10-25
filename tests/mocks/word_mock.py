@@ -17,18 +17,18 @@ class Word(BaseModel):
 @dataclass
 class WordMock:
     success_1 = Word(
-        word="Laranja",
+        word="Coração",
         target_lang=EnumTargetLang.EN_US.value
     )
 
     success_2 = Word(
-        word="Banheiro",
+        word="Calças",
         target_lang=EnumTargetLang.EN_GB.value,
         source_lang=EnumSourceLang.PT.value
     )
 
     success_3 = Word(
-        word="Banheiro",
+        word="Catálogo",
         target_lang=EnumTargetLang.EN_US.value,
         source_lang=EnumSourceLang.PT.value
     )

@@ -27,8 +27,6 @@ Here is the list of installed dependencies. First, this project is built using [
 * [Flask](https://flask.palletsprojects.com/en/3.0.x/);
 * [Flask Async](https://flask.palletsprojects.com/en/stable/async-await/);
 * [Pydantic](https://docs.pydantic.dev/latest/);
-* [PyTestAsyncio](https://docs.pytest.org/en/stable/);
-* [Httpx](https://www.python-httpx.org/);
 * [DeepL Lib](https://github.com/DeepLcom/deepl-python);
 * [PythonDotEnv](https://github.com/theskumar/python-dotenv);
 
