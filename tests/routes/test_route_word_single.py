@@ -81,5 +81,5 @@ def test_route_word_single_failure_case_five(client: FlaskClient):
 
     assert resp.status_code == 400
     assert json_to_dict(resp.data) == {
-        "error": "you need a context for this word, use phrase or text route"
+        "error": "you need a context for this word, use text route"
     }
