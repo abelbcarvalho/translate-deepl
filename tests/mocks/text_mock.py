@@ -17,18 +17,18 @@ class Text(BaseModel):
 @dataclass
 class TextMock:
     success_1 = Text(
-        text="Coração",
+        text="meu coração é de papel",
         target_lang=EnumTargetLang.EN_US.value
     )
 
     success_2 = Text(
-        text="Calças",
+        text="eu estou na faculdade",
         target_lang=EnumTargetLang.EN_GB.value,
         source_lang=EnumSourceLang.PT.value
     )
 
     success_3 = Text(
-        text="Catálogo",
+        text="o brasil ganhou a copa",
         target_lang=EnumTargetLang.EN_US.value,
         source_lang=EnumSourceLang.PT.value
     )
