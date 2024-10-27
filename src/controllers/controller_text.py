@@ -1,6 +1,9 @@
+from src.services.service_text import ServiceText
+
+
 class ControllerText():
     def __init__(self):
-        pass
+        self.service = ServiceText()
 
     async def translate_text(self, text: any):
         pass
