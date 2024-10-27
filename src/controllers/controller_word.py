@@ -21,5 +21,5 @@ class ControllerWord:
         except SuperException as se:
             return await response(
                 body=dict(error=se.message),
-                code=se.code,
+                code=se.code
             )
