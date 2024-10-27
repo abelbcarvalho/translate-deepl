@@ -26,6 +26,7 @@ Here is the list of installed dependencies. First, this project is built using [
 
 * [Flask](https://flask.palletsprojects.com/en/3.0.x/);
 * [Flask Async](https://flask.palletsprojects.com/en/stable/async-await/);
+* [PyTest](https://docs.pytest.org/en/stable/);
 * [Pydantic](https://docs.pydantic.dev/latest/);
 * [DeepL Lib](https://github.com/DeepLcom/deepl-python);
 * [PythonDotEnv](https://github.com/theskumar/python-dotenv);
@@ -73,16 +74,6 @@ Here is the build of our models. Note: *attributes with '?' are optionals.*
 ```json
 {
   "word": "",
-  "target_lang": "",
-  "source_lang?": "string or null",
-}
-```
-
-* PhraseModel
-
-```json
-{
-  "phrase": "",
   "target_lang": "",
   "source_lang?": "string or null",
 }

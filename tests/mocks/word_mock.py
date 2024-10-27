@@ -5,7 +5,7 @@ from pydantic import BaseModel
 from src.enums.enum_source_lang import EnumSourceLang
 from src.enums.enum_target_lang import EnumTargetLang
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 
 class Word(BaseModel):

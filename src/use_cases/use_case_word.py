@@ -14,6 +14,6 @@ class WordUseCase:
         data = await self.transl.translate(text)
 
         if data.text.lower() == word.word.lower():
-            raise SuperException("you need a context for this word, use phrase or text route")
+            raise SuperException("you need a context for this word, use text route")
 
         return data.text
