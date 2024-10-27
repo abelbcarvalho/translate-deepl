@@ -18,7 +18,6 @@ It's my intention to build some useful applications to grown up my skills about 
 
 We provide the service for:
 * only one word (single);
-* phrases (one word or more);
 * texts (something large until 5000 characters).
 
 ## Dependencies
@@ -117,7 +116,33 @@ This model get data from another base model and it's used to send data to *DeepL
 | ignore_tags            | `Optional[List[str]]`    | Tags to be ignored (optional)                |
 
 ## Routes
+
+Base URL: `/api/v1/deepl`
+
+Method: **POST**
+#### route: /translate/word
+#### route:  /translate/text
+
+**NOTE:** See the models for Text and Word routes here. The body for each one.
+
 ## Response
+Basically our responses can be errors or json success with data and status code 200.
+
+For route [word](#route-translateword):
+
+```json
+{
+  "word": "word translated"
+}
+```
+
+For route [text](#route-translatetext):
+
+```json
+{
+  "text": "text translated"
+}
+```
 
 ---
 That's all folks!
