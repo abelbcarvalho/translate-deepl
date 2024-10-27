@@ -11,5 +11,5 @@ async def adapter_word_translate(word: WordModel):
     return Translate(
         text=word.word,
         target_lang=target,
-        source_lang=source,
+        source_lang=source
     )
