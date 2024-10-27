@@ -6,12 +6,12 @@ from src.utilities.adapters.adapter_word_translate import adapter_word_translate
 
 class WordUseCase:
     def __init__(self):
-        self.transl = DeepLTranslate()
+        self.deepl = DeepLTranslate()
 
     async def execute(self, word: WordModel) -> str:
         text = await adapter_word_translate(word)
 
-        data = await self.transl.translate(text)
+        data = await self.deepl.translate(text)
 
         if data.text.lower() == word.word.lower():
             raise SuperException("you need a context for this word, use text route")

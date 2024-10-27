@@ -9,7 +9,7 @@ async def adapter_text_translate(text: TextModel):
     source = await get_lang(text.source_lang)
 
     return Translate(
-        text=text.word,
+        text=text.text,
         target_lang=target,
         source_lang=source
     )
