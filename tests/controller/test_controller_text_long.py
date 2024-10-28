@@ -61,3 +61,12 @@ def test_controller_text_failure_case_three_greater_than_5000_chars(controller_t
     assert json_to_dict(resp.data) == {
         "error": "text attribute cannot be longer than 5000 characters"
     }
+
+
+def test_controller_text_failure_source_lang(controller_text: ControllerText) -> None:
+    resp = run(
+        controller_text.translate_text(TextMock.failure_4.model_dump())
+    )
+
+    assert resp.status_code == 400
+    assert json_to_dict(resp.data) == {"error": "body has invalid data"}

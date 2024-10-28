@@ -77,3 +77,14 @@ def test_controller_word_single_failure_case_five(controller_word: ControllerWor
     assert json_to_dict(resp.data) == {
         "error": "you need a context for this word, use text route"
     }
+
+
+def test_controller_word_single_failure_source_lang(controller_word: ControllerWord) -> None:
+    resp = run(
+        controller_word.translate_word(WordMock.failure_6.model_dump())
+    )
+
+    assert resp.status_code == 400
+    assert json_to_dict(resp.data) == {
+        "error": "body has invalid data"
+    }

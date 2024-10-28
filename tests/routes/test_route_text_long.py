@@ -64,3 +64,13 @@ def test_route_text_failure_case_three_greater_than_5000_chars(client: FlaskClie
     assert json_to_dict(resp.data) == {
         "error": "text attribute cannot be longer than 5000 characters"
     }
+
+
+def test_route_text_failure_case_source_lang(client: FlaskClient) -> None:
+    resp = client.post(
+        base_url.format("/translate/text"),
+        json=TextMock.failure_4.model_dump()
+    )
+
+    assert resp.status_code == 400
+    assert json_to_dict(resp.data) == {"error": "body has invalid data"}

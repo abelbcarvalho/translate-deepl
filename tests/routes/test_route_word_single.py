@@ -83,3 +83,12 @@ def test_route_word_single_failure_case_five(client: FlaskClient) -> None:
     assert json_to_dict(resp.data) == {
         "error": "you need a context for this word, use text route"
     }
+
+def test_route_word_single_failure_case_six(client: FlaskClient) -> None:
+    resp = client.post(
+        base_url.format("/translate/word"),
+        json=WordMock.failure_6.model_dump()
+    )
+
+    assert resp.status_code == 400
+    assert json_to_dict(resp.data) == {"error": "body has invalid data"}
