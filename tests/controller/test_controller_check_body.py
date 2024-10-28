@@ -51,6 +51,17 @@ def test_controller_body_validation_error_word() -> None:
     assert "1 validation error for WordModel\ntarget_lang" in exc_msg
 
 
+def test_controller_body_validation_error_word_source_lang() -> None:
+    with pytest.raises(ValidationError) as ve:
+        WordModel.model_validate(
+            WordMock.failure_6.model_dump()
+        )
+
+    exc_msg = str(ve.value)
+
+    assert "1 validation error for WordModel\nsource_lang" in exc_msg
+
+
 def test_controller_body_validation_error_text() -> None:
     with pytest.raises(ValidationError) as ve:
         TextModel.model_validate(
@@ -60,3 +71,14 @@ def test_controller_body_validation_error_text() -> None:
     exc_msg = str(ve.value)
 
     assert "1 validation error for TextModel\ntarget_lang" in exc_msg
+
+
+def test_controller_body_validation_error_text_source_lang() -> None:
+    with pytest.raises(ValidationError) as ve:
+        TextModel.model_validate(
+            TextMock.failure_4.model_dump()
+        )
+
+    exc_msg = str(ve.value)
+
+    assert "1 validation error for TextModel\nsource_lang" in exc_msg

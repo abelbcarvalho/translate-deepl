@@ -58,3 +58,9 @@ class WordMock:
         word="Laranja",
         target_lang=EnumTargetLang.EN_US.value
     )
+
+    failure_6 = Word(
+        word="Guardanapo",
+        target_lang=EnumTargetLang.EN_US.value,
+        source_lang=EnumTargetLang.PT_BR.value
+    )

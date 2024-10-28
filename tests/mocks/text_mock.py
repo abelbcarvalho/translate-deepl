@@ -47,3 +47,9 @@ class TextMock:
         text="".join("K" + "abcdefghij" * 500),
         target_lang=EnumTargetLang.EN_US.value
     )
+
+    failure_4 = Text(
+        text="Vamos tomar sorvete",
+        target_lang=EnumTargetLang.EN_US.value,
+        source_lang=EnumTargetLang.PT_BR.value
+    )
