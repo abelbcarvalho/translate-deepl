@@ -4,6 +4,8 @@ Implement the [deepl](https://deepl.com) API to make text translation. I'm makin
 ## SUMMARY
 1. [Description](#description)
 2. [Dependencies](#dependencies)
+3. [How To Run?](#how-to-run)
+   1. [Running Tests](#running-tests)
 3. [Structure](#structure)
 4. [Models](#models)
 5. [Languages Codes](#languages-codes)
@@ -38,6 +40,26 @@ You can install all these dependencies just typing the following command at your
 pip install -r requirements.txt
 ```
 
+## How To Run?
+For this topic, it's required you've been installed the all dependencies. So you can know run this project locally. *Remember to configure the `.env` file before with the required keys found at [.env.example](.env.example), renaming it to just **.env** or creating another file with this name.
+
+To Run our application locally, just type:
+
+```commandline
+python app.py
+```
+
+Or access the file [app.py](app.py).
+
+### Running Tests
+To run our suite of Unitary Tests with PyTest, just type a command or use our IDE graphic user interface.
+
+The command is:
+
+```commandline
+pytest
+```
+
 ## Structure
 The package structure of the project [root](/).
 
@@ -57,6 +79,10 @@ src/
 ├──├──language/
 ├──├──response/
 tests/
+├──controller/
+├──mocks/
+├──routes/
+├──service/
 .env.example
 .gitignore
 app.py
@@ -90,7 +116,7 @@ Here is the build of our models. Note: *attributes with '?' are optionals.*
 
 ## Languages Codes
 Here I present to you a link to another documentation file where you'll can see the languages valid. It's what you find at enumerate for backend level.
-* Doc: [LANGUAGES.md](./LANGUAGES.md);
+* Doc: [LANGUAGES.md](LANGUAGES.md);
 
 If you want to see the documentation on [deepl.com](https://deepl.com) website, you can access:
 * [DeepL doc target language](https://developers.deepl.com/docs/resources/supported-languages#target-languages);
