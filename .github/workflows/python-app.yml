@@ -21,7 +21,7 @@ jobs:
       # env variables
       DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
       PORT: ${{ secrets.PORT }}
-      DEBUG: True
+      DEBUG: "True"
 
     steps:
       - uses: actions/checkout@v4
