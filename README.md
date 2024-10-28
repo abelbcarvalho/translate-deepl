@@ -6,12 +6,12 @@ Implement the [deepl](https://deepl.com) API to make text translation. I'm makin
 2. [Dependencies](#dependencies)
 3. [How To Run?](#how-to-run)
    1. [Running Tests](#running-tests)
-3. [Structure](#structure)
-4. [Models](#models)
-5. [Languages Codes](#languages-codes)
-6. [Translate Model](#translate-model)
-7. [Routes](#routes)
-8. [Response](#response)
+4. [Structure](#structure)
+5. [Models](#models)
+6. [Languages Codes](#languages-codes)
+7. [Translate Model](#translate-model)
+8. [Routes](#routes)
+9. [Response](#response)
 
 ## Description
 This software is being built to access the [DeepL API](https://developers.deepl.com/docs/) and make languages translates.
@@ -85,6 +85,7 @@ tests/
 ├──mocks/
 ├──routes/
 ├──service/
+├──use_case/
 .env.example
 .gitignore
 app.py
