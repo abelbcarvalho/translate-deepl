@@ -8,6 +8,8 @@ from flask.testing import FlaskClient
 from app import app
 from src.controllers.controller_text import ControllerText
 from src.controllers.controller_word import ControllerWord
+from src.services.service_word import ServiceWord
+
 
 base_url = "http://127.0.0.1:1998/api/v1/deepl{}"
 
@@ -32,3 +34,9 @@ def controller_word() -> Generator[ControllerWord, None, None]:
 def controller_text() -> Generator[ControllerText, None, None]:
     controller = ControllerText()
     yield controller
+
+
+@pytest.fixture(scope="function")
+def service_word() -> Generator[ServiceWord, None, None]:
+    service = ServiceWord()
+    yield service
