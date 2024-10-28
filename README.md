@@ -43,6 +43,8 @@ pip install -r requirements.txt
 ## How To Run?
 For this topic, it's required you've been installed the all dependencies. So you can know run this project locally. *Remember to configure the `.env` file before with the required keys found at [.env.example](.env.example), renaming it to just **.env** or creating another file with this name.
 
+**You need a DeepL account to have access to an API key and replace it to the `.env` file.**
+
 To Run our application locally, just type:
 
 ```commandline
