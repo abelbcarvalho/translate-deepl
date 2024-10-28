@@ -8,6 +8,7 @@ from flask.testing import FlaskClient
 from app import app
 from src.controllers.controller_text import ControllerText
 from src.controllers.controller_word import ControllerWord
+from src.services.service_text import ServiceText
 from src.services.service_word import ServiceWord
 
 
@@ -39,4 +40,10 @@ def controller_text() -> Generator[ControllerText, None, None]:
 @pytest.fixture(scope="function")
 def service_word() -> Generator[ServiceWord, None, None]:
     service = ServiceWord()
+    yield service
+
+
+@pytest.fixture(scope="function")
+def service_text() -> Generator[ServiceText, None, None]:
+    service = ServiceText()
     yield service
