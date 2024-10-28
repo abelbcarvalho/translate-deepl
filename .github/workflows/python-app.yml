@@ -18,6 +18,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
+      # env variables
       DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
       PORT: ${{ secrets.PORT }}
       DEBUG: True
