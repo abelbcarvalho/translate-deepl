@@ -49,8 +49,7 @@ def test_service_word_single_except_empty(service_word: ServiceWord) -> None:
             service_word.translate_word(word)
         )
 
-
-    exc_msg = ex.value.args[0]
+    exc_msg = str(ex.value)
 
     assert exc_msg == "word for text can't be empty"
 
@@ -58,12 +57,12 @@ def test_service_word_single_except_empty(service_word: ServiceWord) -> None:
 def test_service_word_single_except_greater_than_one(service_word: ServiceWord) -> None:
     word: WordModel = WordModel.model_validate(WordMock.failure_3.model_dump())
 
-    with (pytest.raises(SuperException) as se):
+    with pytest.raises(SuperException) as se:
         run(
             service_word.translate_word(word)
         )
 
-    str_exc = se.value.args[0]
+    str_exc = str(se.value)
 
     assert str_exc == "word length can't be greater than one"
 
@@ -71,11 +70,11 @@ def test_service_word_single_except_greater_than_one(service_word: ServiceWord) 
 def test_service_word_single_except_same_word_not_translated(service_word: ServiceWord) -> None:
     word: WordModel = WordModel.model_validate(WordMock.failure_5.model_dump())
 
-    with (pytest.raises(SuperException) as se):
+    with pytest.raises(SuperException) as se:
         run(
             service_word.translate_word(word)
         )
 
-    str_exc = se.value.args[0]
+    str_exc = str(se.value)
 
     assert str_exc == "you need a context for this word, use text route"

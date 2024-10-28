@@ -13,7 +13,7 @@ from tests.mocks.word_mock import WordMock
 
 
 def test_controller_check_body_super_exception_word() -> None:
-    with pytest.raises(SuperException):
+    with pytest.raises(SuperException) as se:
         run(
             check_body(
                 WordMock.failure_1.model_dump(),
@@ -21,9 +21,13 @@ def test_controller_check_body_super_exception_word() -> None:
             )
         )
 
+    exc_msg = str(se.value)
+
+    assert exc_msg == "body has invalid data"
+
 
 def test_controller_check_body_super_exception_text() -> None:
-    with pytest.raises(SuperException):
+    with pytest.raises(SuperException) as se:
         run(
             check_body(
                 TextMock.failure_1.model_dump(),
@@ -31,16 +35,28 @@ def test_controller_check_body_super_exception_text() -> None:
             )
         )
 
+    exc_msg = str(se.value)
+
+    assert exc_msg == "body has invalid data"
+
 
 def test_controller_body_validation_error_word() -> None:
-    with pytest.raises(ValidationError):
+    with pytest.raises(ValidationError) as ve:
         WordModel.model_validate(
             WordMock.failure_1.model_dump()
         )
 
+    exc_msg = str(ve.value)
+
+    assert "1 validation error for WordModel\ntarget_lang" in exc_msg
+
 
 def test_controller_body_validation_error_text() -> None:
-    with pytest.raises(ValidationError):
+    with pytest.raises(ValidationError) as ve:
         TextModel.model_validate(
             TextMock.failure_1.model_dump()
         )
+
+    exc_msg = str(ve.value)
+
+    assert "1 validation error for TextModel\ntarget_lang" in exc_msg

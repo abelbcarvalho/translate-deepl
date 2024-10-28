@@ -50,7 +50,7 @@ def test_service_text_long_case_except_empty_text(service_text: ServiceText) -> 
             service_text.translate_text(text)
         )
 
-    exc_msg = se.value.args[0]
+    exc_msg = str(se.value)
 
     assert exc_msg == "text attribute cannot be empty"
 
@@ -63,6 +63,6 @@ def test_service_text_long_case_except_max_length_five_thousand(service_text: Se
             service_text.translate_text(text)
         )
 
-    exc_msg = se.value.args[0]
+    exc_msg = str(se.value)
 
     assert exc_msg == "text attribute cannot be longer than 5000 characters"
